@@ -4,5 +4,5 @@ from AppBackend.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('wel/', ReactView.as_view(), name="something"),
+    path('Home/', ReactView.as_view(), name="something"),
 ]

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+
+.App{
+  display: flex;
+  font-family: 'Josefin Sans', sans-serif;
+  color: whitesmoke;
+  background: linear-gradient(179deg, #176eb5, #d545d7);
+  text-shadow: 1px, 0px, 2px, #8dc4f0;
+}

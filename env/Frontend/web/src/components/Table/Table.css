@@ -1,0 +1,39 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+}
+
+th,td {
+  text-align: left;
+  padding: 5px;
+  font-size: 12px;
+}
+
+th, td {
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.19);;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 12px;
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}

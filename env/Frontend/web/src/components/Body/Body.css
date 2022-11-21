@@ -1,0 +1,40 @@
+.Body{
+  display: flex;
+}
+
+.Cards{
+    display: flex;
+    gap: 4.4vh;
+    left: 0;
+    right: 0;
+  }
+
+.Line_chart{
+left: 0;
+right: 0;
+}
+
+.column>.Cards{
+  margin-bottom: 2rem;
+}
+
+.column>.Line_chart{
+margin-bottom: 2rem;
+}
+
+.first_row{
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.column{
+  align-items:flex-start;
+  justify-self: unset;
+  justify-content: space-between;
+}
+
+.second_low{
+  display: flex;
+  justify-content: space-around;
+}
