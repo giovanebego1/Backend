@@ -48,9 +48,9 @@ const EditableRow = ({
         ></input>
       </td>
       <td>
-        <button type="submit">Save</button>
+        <button type="submit">Salvar</button>
         <button type="button" onClick={handleCancelClick}>
-          Cancel
+          Cancelar
         </button>
       </td>
     </tr>

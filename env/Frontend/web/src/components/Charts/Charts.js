@@ -8,8 +8,8 @@ function Charts() {
   return (
     <div className="chart_container">
       <div className="chart">
-        <ChartComponent primaryXAxis={{valueType: "Category", title:"Month"}} title="Expend Analysis"
-        primaryYAxis={{title:"Expends"}} legendSettings={{visible: true}} tooltip={{enable: true}}> 
+        <ChartComponent primaryXAxis={{valueType: "Category", title:"Mês"}} title="Analise de Despesas"
+        primaryYAxis={{title:"Despesas"}} legendSettings={{visible: true}} tooltip={{enable: true}}> 
           <Inject services={[LineSeries, Category, Legend, DataLabel, Tooltip]}></Inject>
           <SeriesCollectionDirective>
             <SeriesDirective dataSource={salseData} xName="month" yName="expend" type="Line" name="Expends" 

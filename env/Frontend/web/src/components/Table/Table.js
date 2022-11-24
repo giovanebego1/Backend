@@ -117,11 +117,11 @@ const Table = () => {
         <table>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Date</th>
-              <th>Description</th>
-              <th>Value</th>
-              <th>Actions</th>
+              <th>Nome</th>
+              <th>Data</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -146,37 +146,37 @@ const Table = () => {
         </table>
       </form>
 
-      <h2>Add a expend</h2>
+      <h2>Adicionar uma despesa</h2>
       <form onSubmit={handleAddFormSubmit}>
         <input
           type="text"
           name="fullName"
           required="required"
-          placeholder="Enter a name..."
+          placeholder="Insira um nome..."
           onChange={handleAddFormChange}
         />
         <input
           type="date"
           name="date"
           required="required"
-          placeholder="Enter an date..."
+          placeholder="Insira uma data..."
           onChange={handleAddFormChange}
         />
         <input
           type="text"
           name="description"
           required="required"
-          placeholder="Enter a description..."
+          placeholder="Insira uma descrição..."
           onChange={handleAddFormChange}
         />
         <input
           type="float"
           name="value"
           required="required"
-          placeholder="Enter an value..."
+          placeholder="Insira um valor..."
           onChange={handleAddFormChange}
         />
-        <button type="submit">Add</button>
+        <button type="submit">Adicionar</button>
       </form>
     </div>
   );

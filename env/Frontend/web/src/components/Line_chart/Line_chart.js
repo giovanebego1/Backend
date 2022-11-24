@@ -14,7 +14,7 @@ function Line_chart() {
       },
       title: {
         display: true,
-        text: 'Grifico de dispesas da empresa',
+        text: 'Grifico de despesas da empresa',
       },
     },
   };

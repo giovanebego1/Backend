@@ -84,10 +84,7 @@ export const cardsData = [
 
 
   export const salseData = [
-    { month: 'Jan', expend: 35 }, { month: 'Feb', expend: 28 },
-    { month: 'Mar', expend: 34 }, { month: 'Apr', expend: 32 },
-    { month: 'May', expend: 40 }, { month: 'Jun', expend: 32 },
-    { month: 'Jul', expend: 35 }, { month: 'Aug', expend: 55 },
-    { month: 'Sep', expend: 38 }, { month: 'Oct', expend: 30 },
-    { month: 'Nov', expend: 25 }, { month: 'Dec', expend: 32 }
+    { month: 'Jan', expend: 35 }, { month: 'Fev', expend: 28 },
+    { month: 'Mar', expend: 34 }, { month: 'Abr', expend: 32 },
+    { month: 'Mai', expend: 40 }, { month: 'Jun', expend: 32 },
 ];

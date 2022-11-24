@@ -96,7 +96,7 @@ function Sidebar() {
               <div className="group">
                 <motion.h3 
                 animate={{opacity: open ? 1 : 0, height: open? 'auto': 0}}>
-                  ANALYTICS</motion.h3>
+                  Analises</motion.h3>
                 <Link to="/">
                   <Item icon={<DashboardRoundedIcon/>} name='Dashboard'/>
                 </Link>
@@ -107,7 +107,7 @@ function Sidebar() {
               {/* 2º Group */}
               <div className="group">
                 <motion.h3 animate={{opacity: open ? 1 : 0, height: open? 'auto': 0}}>
-                  CONTENT</motion.h3>
+                  Setores</motion.h3>
                 <Link to="/Sector">
                   <Item icon={<AttachMoneyRoundedIcon/>} name='Vendas'/>
                 </Link>
@@ -121,7 +121,7 @@ function Sidebar() {
               {/* 3º Group */}
               <div className="group">
                 <motion.h3 animate={{opacity: open ? 1 : 0, height: open? 'auto': 0}}>
-                  CUSTOMIZATION</motion.h3>
+                  </motion.h3>
                 <Item icon={<LogoutRoundedIcon/>} name='Sair'/>
               </div>
             </div>
