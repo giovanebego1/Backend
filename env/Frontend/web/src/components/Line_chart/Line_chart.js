@@ -14,24 +14,24 @@ function Line_chart() {
       },
       title: {
         display: true,
-        text: 'Chart.js Line Chart',
+        text: 'Grifico de dispesas da empresa',
       },
     },
   };
   
-  const labels = ['Septeber', 'October', 'November'];
+  const labels = ['Setembro', 'Outubro', 'Novembro'];
   
   const data = {
     labels,
     datasets: [
       {
-        label: 'Sales',
+        label: 'Vendas',
         data: [1000,2000,3000],
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
       {
-        label: 'Human Resources',
+        label: 'Recursos Humanos',
         data: [7000,8000,9000],
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',

@@ -3,8 +3,6 @@ import TocRoundedIcon from '@mui/icons-material/TocRounded';
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import SmartToyRoundedIcon from '@mui/icons-material/SmartToyRounded';
 import AttachMoneyRoundedIcon from '@mui/icons-material/AttachMoneyRounded';
-import Diversity3RoundedIcon from '@mui/icons-material/Diversity3Rounded';
-import AddchartRoundedIcon from '@mui/icons-material/AddchartRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import Item from "./Item";
 import { motion } from "framer-motion";
@@ -103,7 +101,7 @@ function Sidebar() {
                   <Item icon={<DashboardRoundedIcon/>} name='Dashboard'/>
                 </Link>
                 <Link to="/AI">
-                  <Item icon={<SmartToyRoundedIcon/>} name='Artificial Intelligence'/>
+                  <Item icon={<SmartToyRoundedIcon/>} name='Inteligencia Artificial'/>
                 </Link>
               </div>  
               {/* 2º Group */}
@@ -111,20 +109,20 @@ function Sidebar() {
                 <motion.h3 animate={{opacity: open ? 1 : 0, height: open? 'auto': 0}}>
                   CONTENT</motion.h3>
                 <Link to="/Sector">
-                  <Item icon={<AttachMoneyRoundedIcon/>} name='Sales'/>
+                  <Item icon={<AttachMoneyRoundedIcon/>} name='Vendas'/>
                 </Link>
                 <Link to="/Sector">
-                  <Item icon={<Diversity3RoundedIcon/>} name='Human Resources'/>
+                  <Item icon={<AttachMoneyRoundedIcon/>} name='Recursos Humanos'/>
                 </Link>
                 <Link to="/Sector">
-                  <Item icon={<AddchartRoundedIcon/>} name='Marketing'/>
+                  <Item icon={<AttachMoneyRoundedIcon/>} name='Marketing'/>
                 </Link>
               </div>
               {/* 3º Group */}
               <div className="group">
                 <motion.h3 animate={{opacity: open ? 1 : 0, height: open? 'auto': 0}}>
                   CUSTOMIZATION</motion.h3>
-                <Item icon={<LogoutRoundedIcon/>} name='Log out'/>
+                <Item icon={<LogoutRoundedIcon/>} name='Sair'/>
               </div>
             </div>
             {/* End groups */}
