@@ -6,9 +6,15 @@ import AttachMoneyRoundedIcon from '@mui/icons-material/AttachMoneyRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import Item from "./Item";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import {Link} from "react-router-dom";
-
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { unSetUserToken } from '../../features/authSlice';
+import { getToken, removeToken } from '../../services/LocalStorageService';
+import { useGetLoggedUserQuery } from '../../services/userAuthApi';
+import { useEffect, useState } from 'react';
+import { setUserInfo, unsetUserInfo } from '../../features/userSlice';
+import { Button} from '@mui/material';
 
 function Sidebar() {
   const [open, setOpen] = useState(true);
@@ -51,6 +57,41 @@ function Sidebar() {
     },
   };
 
+  const handleLogout = () => {
+    dispatch(unsetUserInfo({ name: "", email: "" }))
+    dispatch(unSetUserToken({ access_token: null }))
+    removeToken()
+    navigate('/login')
+  }
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const { access_token } = getToken()
+  const { data, isSuccess } = useGetLoggedUserQuery(access_token)
+
+  const [userData, setUserData] = useState({
+    email: "",
+    name: ""
+  })
+
+  // Store User Data in Local State
+  useEffect(() => {
+    if (data && isSuccess) {
+      setUserData({
+        email: data.email,
+        name: data.name,
+      })
+    }
+  }, [data, isSuccess])
+
+  // Store User Data in Redux Store
+  useEffect(() => {
+    if (data && isSuccess) {
+      dispatch(setUserInfo({
+        email: data.email,
+        name: data.name
+      }))
+    }
+  }, [data, isSuccess, dispatch])
   return (
       <div className="Sidebar">
         <motion.div 
@@ -97,7 +138,7 @@ function Sidebar() {
                 <motion.h3 
                 animate={{opacity: open ? 1 : 0, height: open? 'auto': 0}}>
                   Analises</motion.h3>
-                <Link to="/">
+                <Link to="/inicio">
                   <Item icon={<DashboardRoundedIcon/>} name='Dashboard'/>
                 </Link>
                 <Link to="/AI">
@@ -122,7 +163,7 @@ function Sidebar() {
               <div className="group">
                 <motion.h3 animate={{opacity: open ? 1 : 0, height: open? 'auto': 0}}>
                   </motion.h3>
-                <Item icon={<LogoutRoundedIcon/>} name='Sair'/>
+                  <Button variant='outlined' color='secondary' size='large' onClick={handleLogout} sx={{ mt: 6 }} >Logout</Button>
               </div>
             </div>
             {/* End groups */}

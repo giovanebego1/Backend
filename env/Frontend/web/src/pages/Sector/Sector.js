@@ -3,7 +3,7 @@ import Charts from '../../components/Charts/Charts';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Table from '../../components/Table/Table';
 import "./Sector.css";
-import { Row, COl, Container, Col} from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
 
 function Sector() {
   return (
